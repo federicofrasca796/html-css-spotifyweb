@@ -44,9 +44,6 @@ nav h3{
     color: white;
     margin: 1rem 0;
 }
-/* hr{
-    color: #a3a3a3;
-} */
 /* #endregion ***********COMMON*********** */
 
 /* #region ***********MAIN*********** */
@@ -58,7 +55,7 @@ main > aside{
     background-color: black;
     padding:1rem 2rem;
     font-size: 1.2rem;
-    color: #a3a3a3;
+    color: #808080;
 }
 .logo{
     width: 80%;
@@ -97,10 +94,8 @@ aside ul{
 
 
 #sidebar_footer{
-    color: #a3a3a3;
-    text-transform:initial;
 }
-.dl_app{
+.dl_app,.user{
     padding: 1rem 0;
 }
 .dl_app > img{
@@ -109,6 +104,19 @@ aside ul{
     margin-right: 1rem;
 }
 
+.user > img{
+    width:40px;
+    height: 40px;
+    background-color: #808080;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+.user > h3{
+    color: white;
+    display: inline-block;
+    text-transform:capitalize;
+}
 /* MAIN CONTENT */
 
 /* #endregion ***********MAIN*********** */
