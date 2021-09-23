@@ -29,8 +29,8 @@
 .flex{
     display: flex;
 }
-.current_selection{
-    color: white;
+.pad_0_2rem{
+    padding: 0 2rem;
 }
 /* #endregion ***********UTILITY*********** */
 
@@ -49,29 +49,42 @@ nav h3{
 /* #region ***********MAIN*********** */
 
 /* SIDEBAR */
+aside.flex{
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
 main > aside{
     height: 90vh;
     width: 20vw;
     background-color: black;
-    padding:1rem 2rem;
+    padding:1rem 0;
     font-size: 1.2rem;
     color: #808080;
-}
-.logo{
-    width: 80%;
-    margin: 1rem 0;
 }
 aside ul{
     list-style: none;
 }
 
-#home_controls img{
-    width: 50px;
-    vertical-align: middle;
-}
-#home_controls li{
+.logo{
+    width: 70%;
     margin: 1rem 0;
 }
+aside>nav img[src$=".svg"]:not(.current_selection>*,.logo),
+.dl_app img[src$=".svg"]{
+    filter: invert(54%) sepia(0%) saturate(1%) hue-rotate(177deg) brightness(92%) contrast(86%);
+}
+.home_controls img{
+    width: 50px;
+    vertical-align: middle;    
+}
+.home_controls li{
+    padding: .5rem 2rem;
+}
+.current_selection{
+    color: white;
+    border-left: 3px solid #ADFF2F;
+}
+
 
 .add_icon{
     display: inline-block;
@@ -84,18 +97,16 @@ aside ul{
     text-align: center;
     line-height: 60px;
     vertical-align: middle;
+    margin-right:.5rem;
 }
-#user_playlist{
-    margin: 3rem 0;
-}
-#user_playlist li{
+.user_playlist,
+.user_playlist li,
+.home_controls{
     margin: 2rem 0;
 }
 
-
-#sidebar_footer{
-}
-.dl_app,.user{
+.dl_app , 
+.account{
     padding: 1rem 0;
 }
 .dl_app > img{
@@ -103,8 +114,10 @@ aside ul{
     vertical-align: middle;
     margin-right: 1rem;
 }
-
-.user > img{
+.account{
+    border-top: 1px solid#808080;
+}
+.account > img{
     width:40px;
     height: 40px;
     background-color: #808080;
@@ -112,7 +125,7 @@ aside ul{
     vertical-align: middle;
     margin-right: 1rem;
 }
-.user > h3{
+.account > h3{
     color: white;
     display: inline-block;
     text-transform:capitalize;

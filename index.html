@@ -17,16 +17,14 @@
 <body class="">
     <main class="flex">
         <!-- SIDE BAR -->
-        <aside>
+        <aside class="flex">
             <!-- SIDE NAV BAR  -->
             <nav>
                 <!-- LOGO -->
-                <div class="logo">
-                    <img src="./img/logo.svg" alt="spotify logo">
-                </div>
+                <img class="logo pad_0_2rem" src="./img/logo.svg" alt="spotify logo">
 
                 <!-- home_controls -->
-                <ul id="home_controls">
+                <ul class="home_controls">
                     <li class="current_selection">
                         <img src="./img/home.svg" alt="home icon">
                         Home
@@ -42,9 +40,9 @@
                 </ul>
 
                 <!-- playlist -->
-                <section id="user_playlist">
+                <section class="user_playlist pad_0_2rem">
                     <h3>playlist</h3>
-                    <div class="new_playlist">
+                    <div>
                         <div class="add_icon">+</div>
                             Crea Playlist
                     </div>
@@ -60,13 +58,14 @@
                 </section>
             </nav>
 
-            <footer id="sidebar_footer">
+            <!-- SIDEBAR FOOTER (ACCOUNT) -->
+            <footer class="sidebar_footer pad_0_2rem">
                 <div class="dl_app">
                     <img src="./img/download.svg" alt="download icon">
                     Installa app
                 </div>
-                <hr>
-                <div class="user">
+
+                <div class="account">
                     <img src="./img/profile.svg" alt="profile_pic">
                     <h3>john doe</h3>
                 </div>
