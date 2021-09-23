@@ -4,21 +4,6 @@
     box-sizing: border-box;
 }
 
-/* #region ***********UTILITY*********** */
-.flex{
-    display: flex;
-}
-/* #endregion ***********UTILITY*********** */
-
-/* #region ***********COMMON*********** */
-/* body.flex{
-    
-} */
-aside{
-    height: 100%;
-}
-/* #endregion ***********COMMON*********** */
-
 /* #region ***********DEBUG*********** */
 .debug main{
     height: 90vh;
@@ -29,20 +14,34 @@ aside{
     width: 80vw;
     background-color: hotpink;
 }
-.debug #site_footer{
-    height: 10vh;
-    background-color: gray;
-}
 .debug aside{
     width: 20vw;
     background-color: greenyellow;
 }
+.debug #site_footer{
+    height: 10vh;
+    background-color: gray;
+}
 /* #endregion ***********DEBUG*********** */
+
+
+/* #region ***********UTILITY*********** */
+.flex{
+    display: flex;
+}
+/* #endregion ***********UTILITY*********** */
+
+/* #region ***********COMMON*********** */
+/* #endregion ***********COMMON*********** */
 
 /* #region ***********MAIN*********** */
 
 /* SIDEBAR */
-
+main > aside{
+    height: 90vh;
+    width: 20vw;
+    background-color: black;
+}
 
 /* MAIN CONTENT */
 
