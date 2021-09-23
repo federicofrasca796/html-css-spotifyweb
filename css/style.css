@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.clearfix::after{
+    content: "";
+    display: table;
+    clear:both;
+}
 /* #region ***********DEBUG*********** */
 .debug main{
     height: 90vh;
@@ -15,7 +19,7 @@
     background-color: hotpink;
 }
 .debug aside{
-    width: 20vw;
+    width: 20%;
     background-color: greenyellow;
 }
 .debug #site_footer{
@@ -32,6 +36,19 @@
 .pad_0_2rem{
     padding: 0 2rem;
 }
+
+.btn_h50{
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    padding: 0rem 3rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+.btn_white{
+    color: white;
+    border: 1px solid white;
+}
 /* #endregion ***********UTILITY*********** */
 
 /* #region ***********COMMON*********** */
@@ -39,10 +56,13 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
-nav h3{
+h3{
     text-transform: uppercase;
     color: white;
     margin: 1rem 0;
+}
+a{
+    text-decoration: none;
 }
 /* #endregion ***********COMMON*********** */
 
@@ -130,7 +150,18 @@ aside>nav img[src$=".svg"]:not(.current_selection>*,.logo),
     display: inline-block;
     text-transform:capitalize;
 }
+
 /* MAIN CONTENT */
+#main_content{
+    width:80%;
+}
+.upgrade{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+.upgrade>.btn_h50{
+    float:right;
+}
 
 /* #endregion ***********MAIN*********** */
 
