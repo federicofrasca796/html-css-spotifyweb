@@ -56,10 +56,15 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
+main{
+    height: 90vh;
+}
 h3{
     text-transform: uppercase;
-    color: white;
     margin: 1rem 0;
+}
+ul{
+    list-style: none;
 }
 a{
     text-decoration: none;
@@ -70,19 +75,16 @@ a{
 
 /* SIDEBAR */
 aside.flex{
-    flex-flow: column wrap;
+    flex-direction: column;
     justify-content: space-between;
 }
 main > aside{
-    height: 90vh;
+    height: 100%;
     width: 20vw;
     background-color: black;
     padding:1rem 0;
     font-size: 1.2rem;
     color: #808080;
-}
-aside ul{
-    list-style: none;
 }
 
 .logo{
@@ -93,6 +95,8 @@ aside>nav img[src$=".svg"]:not(.current_selection>*,.logo),
 .dl_app img[src$=".svg"]{
     filter: invert(54%) sepia(0%) saturate(1%) hue-rotate(177deg) brightness(92%) contrast(86%);
 }
+
+
 .home_controls img{
     width: 50px;
     vertical-align: middle;    
@@ -100,11 +104,10 @@ aside>nav img[src$=".svg"]:not(.current_selection>*,.logo),
 .home_controls li{
     padding: .5rem 2rem;
 }
-.current_selection{
+aside .current_selection{
     color: white;
     border-left: 3px solid #ADFF2F;
 }
-
 
 .add_icon{
     display: inline-block;
@@ -119,12 +122,19 @@ aside>nav img[src$=".svg"]:not(.current_selection>*,.logo),
     vertical-align: middle;
     margin-right:.5rem;
 }
-.user_playlist,
-.user_playlist li,
+.playlist,
+.playlist li,
 .home_controls{
     margin: 2rem 0;
 }
-
+.playlist > ul{
+    max-height: calc(100vh - 65vh);
+    min-height: calc(100vh - 95vh);
+    overflow-y: auto;
+}
+.playlist h3{
+    color: white;
+}
 .dl_app , 
 .account{
     padding: 1rem 0;
@@ -153,7 +163,8 @@ aside>nav img[src$=".svg"]:not(.current_selection>*,.logo),
 
 /* MAIN CONTENT */
 #main_content{
-    width:80%;
+    width:80vw;
+    background-color: #141922;
 }
 .upgrade{
     background-color: rgba(0, 0, 0, 0.5);
@@ -163,10 +174,24 @@ aside>nav img[src$=".svg"]:not(.current_selection>*,.logo),
     float:right;
 }
 
+.menu ul{
+    text-align: center;
+}
+.menu li{
+    display: inline-block;
+    color: #808080;
+    margin: 1rem;
+}
+.menu .current_selection{
+    
+}
 /* #endregion ***********MAIN*********** */
 
 /* #region ***********FOOTER*********** */
-
+#site_footer{
+    background-color: gray;
+    height: 10vh;
+}
 
 /* #endregion 
 ***********FOOTER*********** */
