@@ -4,9 +4,25 @@
     box-sizing: border-box;
 }
 
+/* #region ***********COMMON*********** */
+
+/* #endregion ***********COMMON*********** */
+aside{
+    height: 100%;
+}
 /* #region ***********DEBUG*********** */
-
-
+.debug main{
+    height: 90vh;
+    background-color: aqua;
+}
+.debug #site_footer{
+    height: 10vh;
+    background-color: gray;
+}
+.debug aside{
+    width: 20vw;
+    background-color: greenyellow;
+}
 /* #endregion ***********DEBUG*********** */
 
 /* #region ***********UTILITY*********** */
