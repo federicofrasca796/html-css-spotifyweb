@@ -44,6 +44,9 @@ nav h3{
     color: white;
     margin: 1rem 0;
 }
+/* hr{
+    color: #a3a3a3;
+} */
 /* #endregion ***********COMMON*********** */
 
 /* #region ***********MAIN*********** */
@@ -90,6 +93,20 @@ aside ul{
 }
 #user_playlist li{
     margin: 2rem 0;
+}
+
+
+#sidebar_footer{
+    color: #a3a3a3;
+    text-transform:initial;
+}
+.dl_app{
+    padding: 1rem 0;
+}
+.dl_app > img{
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 1rem;
 }
 
 /* MAIN CONTENT */
