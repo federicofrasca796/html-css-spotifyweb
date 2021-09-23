@@ -4,16 +4,30 @@
     box-sizing: border-box;
 }
 
-/* #region ***********COMMON*********** */
+/* #region ***********UTILITY*********** */
+.flex{
+    display: flex;
+}
+/* #endregion ***********UTILITY*********** */
 
-/* #endregion ***********COMMON*********** */
+/* #region ***********COMMON*********** */
+/* body.flex{
+    
+} */
 aside{
     height: 100%;
 }
+/* #endregion ***********COMMON*********** */
+
 /* #region ***********DEBUG*********** */
 .debug main{
     height: 90vh;
     background-color: aqua;
+}
+.debug #main_content{
+    height: 100%;
+    width: 80vw;
+    background-color: hotpink;
 }
 .debug #site_footer{
     height: 10vh;
@@ -24,11 +38,6 @@ aside{
     background-color: greenyellow;
 }
 /* #endregion ***********DEBUG*********** */
-
-/* #region ***********UTILITY*********** */
-
-
-/* #endregion ***********UTILITY*********** */
 
 /* #region ***********MAIN*********** */
 
