@@ -118,6 +118,10 @@ a{
     flex-direction: column;
     justify-content: space-between;
 }
+.sidebar > nav{
+    overflow: hidden;
+    min-height: 300px;
+}
 
 .logo{
     width: 70%;
@@ -160,7 +164,7 @@ a{
     margin: 2rem 0;
 }
 .playlist > ul{
-    max-height: calc(100vh - 85vh);
+    max-height: calc(100vh - 70vh);
     min-height: calc(100vh - 97vh);
     overflow-y: auto;
 }
