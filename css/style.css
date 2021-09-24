@@ -23,7 +23,7 @@
     background-color: greenyellow;
 }
 .debug #site_footer{
-    height: 10vh;
+    height: 200px;
     background-color: gray;
 }
 /* #endregion ***********DEBUG*********** */
@@ -53,11 +53,13 @@
 
 /* #region ***********COMMON*********** */
 body{
+    height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    overflow: hidden;
 }
 main{
-    height: 90vh;
+    height: calc(100% - 100px);
 }
 h3{
     text-transform: uppercase;
@@ -79,11 +81,9 @@ aside.flex{
     justify-content: space-between;
 }
 main > aside{
-    height: 100%;
     width: 20vw;
     background-color: black;
-    padding:1rem 0;
-    font-size: 1.2rem;
+    padding: 1rem 0;
     color: #808080;
 }
 
@@ -111,14 +111,14 @@ aside .current_selection{
 
 .add_icon{
     display: inline-block;
-    height:60px;
-    width:60px;
+    height:50px;
+    width:50px;
+    line-height: 50px;
+    font-size: 50px;
     background: #a3a3a3;
     color:black;
-    font-size: 60px;
     font-weight: 500;
     text-align: center;
-    line-height: 60px;
     vertical-align: middle;
     margin-right:.5rem;
 }
@@ -128,7 +128,7 @@ aside .current_selection{
     margin: 2rem 0;
 }
 .playlist > ul{
-    max-height: calc(100vh - 65vh);
+    max-height: calc(100vh - 83vh);
     min-height: calc(100vh - 95vh);
     overflow-y: auto;
 }
@@ -190,7 +190,7 @@ aside .current_selection{
 /* #region ***********FOOTER*********** */
 #site_footer{
     background-color: gray;
-    height: 10vh;
+    height: 100px;
 }
 
 /* #endregion 
