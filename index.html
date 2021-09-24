@@ -198,16 +198,49 @@
     <!-- /MAIN -->
 
     <footer id="player" class="flex">
+        <!-- NOW PLAYING (LEFT) -->
         <div class="now_playing flex">
             <img src="./img/sinister.jpeg" alt="current song playing">
-            <span class="now_title">
+            <a href="#" class="now_title">
                 <h4>Sinister</h4>
                 <span class="subtitle">Brano Nome</span>
-            </span>
-            <div class="actions">
-                <!-- icons here -->
+            </a>
+            <div class="save_actions">
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
             </div>
         </div>
+
+        <!-- PLAYER CONTROLS (MIDDLE) -->
+        <div class="controls_middle flex">
+            <nav class="player_buttons">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="far fa-play-circle"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo"></i>
+            </nav>
+            <div class="play_time flex">
+                <span>0:25</span>
+                <span class="time_bar">
+                    <span class="white_bar"></span>
+                </span>
+                <span>4:35</span>
+            </div>
+        </div>
+
+        <!-- AUDIO CONTROLS (RIGHT) -->
+        <div class="audio_controls">
+            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-desktop"></i>
+            <span>
+                <i class="fas fa-volume-up"></i>
+                <span class="volume_bar">
+                    <span class="white_bar"></span>
+                </span>
+            </span>
+        </div>
+
     </footer>
     <!-- /SITE FOOTER -->
 </body>
