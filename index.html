@@ -17,7 +17,7 @@
 <body class=" ">
     <main class="flex">
         <!-- SIDE BAR -->
-        <aside class="flex">
+        <aside class="sidebar flex">
             <!-- SIDE NAV BAR  -->
             <nav>
                 <!-- LOGO -->
@@ -81,6 +81,7 @@
                 <a href="#" class="btn_h50 btn_white">effettua l'upgrade</a>
             </div>
 
+            <!-- NAV CONTENT MENU  -->
             <nav class="menu">
                 <ul>
                     <li class="current_selection"><h3>in evidenza</h3></li>
@@ -92,36 +93,99 @@
                 </ul>
             </nav>
 
-            <div class="suggested_playlists">
+            <!-- SUGGESTED -->
+            <div class="suggested">
+                <!-- recently played -->
                 <section>
-                    <h2>Recently played</h2>
-                    <div class="container flex">
-                        <div class="song">
+                    <div class="pl_title">
+                        <h1>Recently played</h1>
+                    </div>
+                    <div class="covers_container flex">
+                        <div class="song_wrapper">
                             <img src="./img/metal_lifting.jpg" alt="metal songs covers">
                             <div class="song_name">
                                 <h3>Heavy Metal</h3>
                                 Subtitle
                             </div>
                         </div>
-                        <div class="song">
-                            <img src="./img/metal_lifting.jpg" alt="metal songs covers">
+                        <div class="song_wrapper">
+                            <img src="./img/stranger.jpeg" alt="Stranger things cover">
                             <div class="song_name">
-                                <h3>Heavy Metal</h3>
+                                <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                                Kyle Dixon & Michael Stein
+                            </div>
+                        </div>
+                        <div class="song_wrapper">
+                            <img src="./img/aquietplace.jpeg" alt="A quiet place cover">
+                            <div class="song_name">
+                                <h3>A quiet place</h3>
                                 Subtitle
                             </div>
                         </div>
-                        <div class="song">
-                            <img src="./img/metal_lifting.jpg" alt="metal songs covers">
+                        <div class="song_wrapper">
+                            <img src="./img/split.jpeg" alt="Split cover">
                             <div class="song_name">
-                                <h3>Heavy Metal</h3>
+                                <h3>Split</h3>
                                 Subtitle
                             </div>
                         </div>
-                        <div class="song">
-                            <img src="./img/metal_lifting.jpg" alt="metal songs covers">
+                        <div class="song_wrapper">
+                            <img src="./img/cure.jpeg" alt="A cure for wellness cover">
                             <div class="song_name">
-                                <h3>Heavy Metal</h3>
+                                <h3>A cure for wellness</h3>
                                 Subtitle
+                            </div>
+                        </div>
+                        <div class="song_wrapper">
+                            <img src="./img/sinister.jpeg" alt="Sinister cover">
+                            <div class="song_name">
+                                <h3>Sinister</h3>
+                                Subtitle
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- playlists generated for you -->
+                <section>
+                    <div class="pl_title">
+                        <h1>Creato per John Doe</h1>
+                        <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+                    </div>
+                    <div class="covers_container flex">
+                        <div class="song_wrapper">
+                            <img src="./img/radar.jpeg" alt="heavly edited photo of a girl sitting and thinking ">
+                            <div class="song_name">
+                                <h3>Release Radar</h3>
+                            </div>
+                        </div>
+                        <div class="song_wrapper">
+                            <img src="./img/mixdaily.jpeg" alt="two musicians staring the camera in a heavily edited photo">
+                            <div class="song_name">
+                                <h3>Daily Mix 1</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- popular artists -->
+                <section>
+                    <div class="pl_title">
+                        <h1>Artisti più popolari</h1>
+                        <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+                    </div>
+
+                    <div class="covers_container flex">
+                        <div class="song_wrapper">
+                            <img class="artist_circle" src="./img/youg.jpeg" alt="young (band) photo">
+                            <div class="song_name">
+                                <h3>Young</h3>
+                            </div>
+                        </div>
+                        <div class="song_wrapper">
+                            <img class="artist_circle" src="./img/einaudi.jpeg" alt="ludovico einaudi bw photo">
+                            <div class="song_name">
+                                <h3>Ludovico Einaudi</h3>
                             </div>
                         </div>
                     </div>
