@@ -139,10 +139,12 @@ img[src$=".svg"]:not(.white_svg){
 .home_controls li{
     padding: .5rem 2rem;
 }
-.sidebar .current_selection,
-.home_controls li:hover{
+.sidebar .current_selection{
     color: white;
     border-left: 3px solid #ADFF2F;
+}
+.home_controls li:hover{
+    color: white;
 }
 .home_controls li:hover img{
     filter: none;
@@ -242,8 +244,7 @@ img[src$=".svg"]:not(.white_svg){
     float:right;
 }
 .upgrade>.btn_h50:hover{
-    transition: background-color .3s;
-    background-color: #c1c1c18a;
+    transform: scale(110%);
 }
 
 .menu ul{
@@ -257,6 +258,30 @@ img[src$=".svg"]:not(.white_svg){
 }
 .menu h3{
     font-size: 1rem;
+}
+.menu li::after{
+    content: "";
+    width:50px;
+    height: 3px;
+    background-color: #ADFF2F;
+    position:absolute;
+    bottom: .5rem;
+    left:50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .15s;
+}
+.menu li.current_selection::after,
+.menu li:hover::after{
+    visibility: visible;
+    opacity: 1;
+}
+.menu li:hover:not(.current_selection)::after{
+    background: #a3a3a394;
+}
+.menu li:hover{
+    color: white;
 }
 .suggested{
     margin: 2rem;
@@ -278,6 +303,8 @@ img[src$=".svg"]:not(.white_svg){
 }
 .cover_img{
     position:relative;
+    max-width: 250px;
+    
 }
 .play_hidden.flex{
     position:absolute;
@@ -317,24 +344,6 @@ img[src$=".svg"]:not(.white_svg){
     text-decoration: underline;
 }
 
-.menu li::after{
-    content: "";
-    width:50px;
-    height: 3px;
-    background-color: #ADFF2F;
-    position:absolute;
-    bottom: .5rem;
-    left:50%;
-    transform: translateX(-50%);
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity .15s;
-}
-.menu li.current_selection::after,
-.menu li:hover::after{
-    visibility: visible;
-    opacity: 1;
-}
 /* #endregion ***********MAIN*********** */
 
 /* #region ***********FOOTER*********** */
