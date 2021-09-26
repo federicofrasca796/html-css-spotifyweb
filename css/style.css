@@ -299,9 +299,6 @@ img[src$=".svg"]:not(.white_svg){
 .cover_img:hover .play_hidden.flex{
     display: flex;
 }
-.cover_img::after{
-
-}
 .artist_circle{
     border-radius: 50%;
 }
