@@ -127,17 +127,11 @@ a{
     width: 80%;
     margin: 1rem 0;
 }
-img[src$=".svg"]:not(.logo,.current_selection>img){
+img[src$=".svg"]:not(.white_svg){
     filter: invert(54%) sepia(0%) saturate(1%) hue-rotate(177deg) brightness(92%) contrast(86%);
 }
 
-.home_controls li:hover{
-    border-left: 3px solid #ADFF2F;
-    color: white;
-}
-.home_controls li:hover img{
-    filter: none;
-}
+
 .home_controls img{
     width: 40px;
     vertical-align: middle;    
@@ -145,11 +139,14 @@ img[src$=".svg"]:not(.logo,.current_selection>img){
 .home_controls li{
     padding: .5rem 2rem;
 }
-.sidebar .current_selection{
+.sidebar .current_selection,
+.home_controls li:hover{
     color: white;
     border-left: 3px solid #ADFF2F;
 }
-
+.home_controls li:hover img{
+    filter: none;
+}
 
 
 .add_icon{
@@ -233,28 +230,6 @@ img[src$=".svg"]:not(.logo,.current_selection>img){
 .menu h3{
     font-size: 1rem;
 }
-.menu li::after{
-    content: "";
-    width:50px;
-    height: 3px;
-    background-color: #ADFF2F;
-    position:absolute;
-    bottom: .5rem;
-    left:50%;
-    transform: translateX(-50%);
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity .15s;
-}
-menu .current_selection a{
-    color: white;
-}
-.menu li.current_selection::after,
-.menu li:hover::after{
-    visibility: visible;
-    opacity: 1;
-}
-
 .suggested{
     margin: 2rem;
 }
@@ -283,6 +258,25 @@ menu .current_selection a{
     color:white;
     text-transform: none;
     margin: 1rem 0 .5rem 0;
+}
+
+.menu li::after{
+    content: "";
+    width:50px;
+    height: 3px;
+    background-color: #ADFF2F;
+    position:absolute;
+    bottom: .5rem;
+    left:50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .15s;
+}
+.menu li.current_selection::after,
+.menu li:hover::after{
+    visibility: visible;
+    opacity: 1;
 }
 /* #endregion ***********MAIN*********** */
 
