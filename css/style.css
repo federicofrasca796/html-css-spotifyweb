@@ -148,7 +148,9 @@ img[src$=".svg"]:not(.white_svg){
     filter: none;
 }
 
-
+.playlist h3{
+    color: white;
+}
 .add_icon{
     display: inline-block;
     height:50px;
@@ -168,26 +170,41 @@ img[src$=".svg"]:not(.white_svg){
     margin: 1.5rem 0;
 }
 .playlist > ul{
-    max-height: calc(100vh - 70vh);
+    max-height: calc(100vh - 77vh);
     min-height: calc(100vh - 97vh);
     overflow-y: auto;
     margin-top:2rem;
 }
-.playlist h3{
+.add_pl:hover .add_icon{
+    background: white;
+}
+.add_pl:hover span{
     color: white;
+    /* text-decoration: underline; */
+}
+.playlist a:hover{
+    color: white;
+}
+
+.sidebar_footer > a{
+    display: block;
 }
 .dl_app{
     padding: 1rem 0;
-}
-.account{
-    padding-top: 1rem;
 }
 .dl_app > img{
     width: 30px;
     vertical-align: middle;
     margin-right: 1rem;
 }
+.dl_app:hover img{
+    filter: none;
+}
+.dl_app:hover{
+    color: white;
+}
 .account{
+    padding-top: 1rem;
     border-top: 1px solid#808080;
 }
 .account > img{
@@ -203,6 +220,13 @@ img[src$=".svg"]:not(.white_svg){
     display: inline-block;
     text-transform:capitalize;
 }
+.account:hover h3{
+    text-decoration: underline;
+}
+.account:hover img{
+    background-color: #c1c1c1;
+}
+
 
 /* MAIN CONTENT */
 #main_content{
@@ -294,19 +318,23 @@ img[src$=".svg"]:not(.white_svg){
     align-items: center;
     justify-content: space-between;
 }
-.now_playing_wrapper{
+.now_wrapper{
     height: 100%;
     align-items: center;
 }
-.now_playing_wrapper > img{
+.now_wrapper img{
     height: 100%;
+    transition: transform .5s;
 }
 .now_title{
     margin: 0 1rem;
     display: inline-block;
 }
-.now_title:hover > *{
+.now_wrapper:hover .now_title > *{
     text-decoration: underline;
+}
+.now_wrapper:hover img{
+    transform: scale(104%);
 }
 .now_title > h4:first-of-type{
     color:white;
@@ -314,18 +342,25 @@ img[src$=".svg"]:not(.white_svg){
 }
 .save_actions{
     color: #808080;
-    /* margin-left: 1rem; */
 }
 
-.save_actions > i,
-.audio_controls i{
+.save_actions > a:hover{
+    color: white;
+}
+
+.save_actions a,
+.audio_controls a{
     margin:.5rem;
     font-size: 1.2rem;
 }
-.player_buttons> i{
+.player_buttons > a{
     margin: 0 1rem;
     font-size: 1.5rem;
     vertical-align: middle;
+}
+.player_buttons > a:nth-child(3){
+    margin: 0 1.2rem;
+    font-size: 3rem;
 }
 .controls_middle{
     flex-direction: column;
@@ -336,22 +371,20 @@ img[src$=".svg"]:not(.white_svg){
 .audio_controls{
     color: white;
 }
-.player_buttons> i:nth-child(3){
-    margin: 0 2rem;
-    font-size: 3rem;
-}
+
 
 .play_time{
     align-items: center;
-    margin: 1rem 0;
+    margin: 10px 0;
+    font-size: .9rem;
 }
 .time_bar{
-    width: 30vw;
+    width: 40vw;
     height:5px;
     border-radius: 2.5px;
     background: #5a5a5a;
     position:relative;
-    margin: 0 2rem;
+    margin: 0 2rem; 
 }
 .white_bar{
     background: #c1c1c1;
@@ -362,6 +395,26 @@ img[src$=".svg"]:not(.white_svg){
     left: 0;
     top:50%;
     transform: translateY(-50%);
+}
+.time_slider_circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+    cursor:pointer
+}
+.time_bar:hover .white_bar,
+.volume_bar:hover .white_bar{
+    background: #ADFF2F;
+}
+.time_bar:hover .time_slider_circle,
+.volume_bar:hover .time_slider_circle{
+    visibility: visible;
 }
 .volume_bar{
     display: inline-block;

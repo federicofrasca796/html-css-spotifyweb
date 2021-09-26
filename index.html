@@ -20,55 +20,61 @@
         <aside class="sidebar flex">
             <!-- SIDE NAV BAR  -->
             <nav>
-                <!-- LOGO -->
+                <!-- logo -->
                 <img class="logo white_svg pad_0_2rem" src="./img/logo.svg" alt="spotify logo">
 
                 <!-- home_controls -->
                 <ul class="home_controls">
                     <li class="current_selection">
-                        <img class="white_svg" src="./img/home.svg" alt="home icon">
-                        Home
+                        <a href="#"></a>
+                            <img class="white_svg" src="./img/home.svg" alt="home icon">
+                            Home
+                        </a>
                     </li> 
                     <li>
-                        <img src="./img/search.svg" alt="search icon">
-                        Cerca
+                        <a href="#">
+                            <img src="./img/search.svg" alt="search icon">
+                            Cerca
+                        </a>
                     </li>
                     <li>
-                        <img src="./img/libreria.svg" alt="library icon">
-                        La tua libreria
+                        <a href="#">
+                            <img src="./img/libreria.svg" alt="library icon">
+                            La tua libreria
+                        </a>
                     </li>
                 </ul>
 
                 <!-- playlist -->
                 <section class="playlist pad_0_2rem">
                     <h3>playlist</h3>
-                    <div>
+                    <a class="add_pl" href="#">
                         <div class="add_icon">+</div>
-                            Crea Playlist
-                    </div>
+                        <span>Crea Playlist</span> 
+                    </a>
                     <ul>
-                        <li>Nome playlist</li>
-                        <li>Nome playlist</li>
-                        <li>Nome playlist</li>
-                        <li>Nome playlist</li>
-                        <li>Nome playlist</li>
-                        <li>Nome playlist</li>
-                        <li>Nome playlist</li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
                     </ul>
                 </section>
             </nav>
 
             <!-- SIDEBAR FOOTER (ACCOUNT) -->
             <footer class="sidebar_footer pad_0_2rem">
-                <div class="dl_app">
-                    <img class="white_svg" src="./img/download.svg" alt="download icon">
+                <a href="#" class="dl_app">
+                    <img src="./img/download.svg" alt="download icon">
                     Installa app
-                </div>
+                </a>
 
-                <div class="account">
+                <a href="#" class="account">
                     <img class="white_svg" src="./img/profile.svg" alt="profile_pic">
                     <h3>john doe</h3>
-                </div>
+                </a>
             </footer>
         </aside>
         
@@ -210,32 +216,45 @@
     <footer id="player" class="flex">
         <!-- NOW PLAYING (LEFT) -->
         <div class="now_playing flex">
-            <div class="now_playing_wrapper flex">
-                <img src="./img/sinister.jpeg" alt="current song playing">
-                <a href="#" class="now_title">
-                    <h4>Sinister</h4>
-                    <span class="subtitle">Brano Nome</span>
+                <a class="now_wrapper flex" href="#" >
+                    <img src="./img/sinister.jpeg" alt="current song playing">
+                    <span class="now_title">
+                        <h4>Sinister</h4>
+                        <span class="subtitle">Brano Nome</span>
+                    </span>
                 </a>
-            </div>
             <div class="save_actions">
-                <i class="far fa-heart"></i>
-                <i class="far fa-folder"></i>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="far fa-folder"></i></a>
             </div>
         </div>
 
         <!-- PLAYER CONTROLS (MIDDLE) -->
         <div class="controls_middle flex">
             <nav class="player_buttons">
-                <i class="fas fa-random"></i>
-                <i class="fas fa-step-backward"></i>
-                <i class="far fa-play-circle"></i>
-                <i class="fas fa-step-forward"></i>
-                <i class="fas fa-redo"></i>
+                <a href="#">
+                    <i class="fas fa-random"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-step-backward"></i>
+                </a>
+                <a href="#">
+                    <i class="far fa-play-circle"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-step-forward"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-redo"></i>
+                </a>
             </nav>
             <div class="play_time flex">
                 <span>0:25</span>
                 <span class="time_bar">
-                    <span class="white_bar"></span>
+                    <span class="white_bar">
+                        <span class="time_slider_circle"></span>
+                    </span>
+                    
                 </span>
                 <span>4:35</span>
             </div>
@@ -243,12 +262,14 @@
 
         <!-- AUDIO CONTROLS (RIGHT) -->
         <div class="audio_controls">
-            <i class="fas fa-list-ul"></i>
-            <i class="fas fa-desktop"></i>
+            <a href="#"><i class="fas fa-list-ul"></i></a>
+            <a href="#"><i class="fas fa-desktop"></i></a>
             <span>
-                <i class="fas fa-volume-up"></i>
+                <a href="#"><i class="fas fa-volume-up"></i></a>
                 <span class="volume_bar">
-                    <span class="white_bar"></span>
+                    <span class="white_bar">
+                        <span class="time_slider_circle"></span>
+                    </span>
                 </span>
             </span>
         </div>
