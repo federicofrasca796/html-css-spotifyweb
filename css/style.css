@@ -51,6 +51,7 @@
 }
 .subtitle{
     color:#808080;
+    font-size: .8rem;
 }
 /* #endregion ***********UTILITY*********** */
 
@@ -376,6 +377,8 @@ img[src$=".svg"]:not(.white_svg){
 .now_wrapper{
     height: 100%;
     align-items: center;
+    flex-shrink: 0;
+
 }
 .now_wrapper img{
     height: 100%;
@@ -383,7 +386,6 @@ img[src$=".svg"]:not(.white_svg){
 }
 .now_title{
     margin: 0 1rem;
-    display: inline-block;
 }
 .now_wrapper:hover .now_title > *{
     text-decoration: underline;
@@ -409,6 +411,9 @@ img[src$=".svg"]:not(.white_svg){
 .audio_controls a{
     margin:.5rem;
 }
+.player_buttons{
+    align-items: center;
+}
 .player_buttons > a{
     margin: 0 1rem;
     font-size: 1.3rem;
@@ -421,7 +426,8 @@ img[src$=".svg"]:not(.white_svg){
     flex-direction: column;
     align-items: center;
     margin: 0 2rem;
-    flex-shrink: 2;
+    flex-shrink: 1;
+    width: 50%;
 }
 .player_buttons,
 .play_time,
@@ -429,19 +435,19 @@ img[src$=".svg"]:not(.white_svg){
     color: white;
 }
 
-
 .play_time{
     align-items: center;
     margin: 10px 0;
     font-size: .9rem;
+    width:100%;
 }
 .time_bar{
-    width: 40vw;
+    width: 100%;
     height:5px;
     border-radius: 2.5px;
     background: #5a5a5a;
     position:relative;
-    margin: 0 2rem; 
+    margin: auto 2rem;
 }
 .white_bar{
     background: #c1c1c1;
@@ -522,14 +528,26 @@ img[src$=".svg"]:not(.white_svg){
     .upgrade>.small_btn{
         display: block;
     }
-
+    .now_playing.flex{
+        flex-shrink: 1;
+    }
 }
 @media screen and (max-width:450px) {
     .logo,
     .playlist,
-    .sidebar_footer,
+    .sidebar_footer a>*:not(img),
     .home_controls span{
         display: none;
+    }
+    .sidebar_footer{
+        padding: 0;
+    }
+    .sidebar_footer img{
+        margin: auto;
+        display: block;
+    }
+    .dl_app img{
+        padding-right:5px;
     }
     .home_controls li{
         padding: 8px 0;
@@ -541,7 +559,8 @@ img[src$=".svg"]:not(.white_svg){
     #main_content{
         width: calc(100% - 50px);
     }
-    .logo_s, .home_controls img{
+    .logo_s, 
+    .home_controls img{
         display: block;
         width: 100%;
     }
@@ -549,5 +568,6 @@ img[src$=".svg"]:not(.white_svg){
     .sidebar .current_selection {
         border-left: none;
     }
+
 }
 /* #endregion ***********MEDIAQUERY*********** */
