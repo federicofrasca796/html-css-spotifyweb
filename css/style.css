@@ -173,8 +173,7 @@ img[src$=".svg"]:not(.white_svg){
     margin: 1.5rem 0;
 }
 .playlist > ul{
-    max-height: calc(100vh - 74vh);
-    min-height: calc(100vh - 97vh);
+    max-height: calc(100vh - 68vh);
     overflow-y: auto;
     margin-top:2rem;
 }
@@ -356,6 +355,7 @@ img[src$=".svg"]:not(.white_svg){
     height: 60%;
     align-items: center;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 .now_wrapper{
     height: 100%;
@@ -382,7 +382,9 @@ img[src$=".svg"]:not(.white_svg){
 .save_actions{
     color: #808080;
 }
-
+.save_actions a{
+    font-size: 1.2rem;
+}
 .save_actions > a:hover{
     color: white;
 }
@@ -390,7 +392,6 @@ img[src$=".svg"]:not(.white_svg){
 .save_actions a,
 .audio_controls a{
     margin:.5rem;
-    font-size: 1.2rem;
 }
 .player_buttons > a{
     margin: 0 1rem;
@@ -403,6 +404,8 @@ img[src$=".svg"]:not(.white_svg){
 .controls_middle{
     flex-direction: column;
     align-items: center;
+    margin: 0 2rem;
+    flex-shrink: 2;
 }
 .player_buttons,
 .play_time,
@@ -427,11 +430,28 @@ img[src$=".svg"]:not(.white_svg){
 .white_bar{
     background: #c1c1c1;
     width: 30%;
-    height:5px;
+    height:100%;
     border-radius: 2.5px;
     position: absolute;
     left: 0;
     top:50%;
+    transform: translateY(-50%);
+}
+
+.audio_controls.flex{
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+.volume_bar{
+    display: inline-block;
+    width: 5vw;
+    height:4px;
+    border-radius: 2.5px;
+    background: #5a5a5a;
+    position:relative;
+    margin: 0 .5rem;
+    vertical-align: middle;
     transform: translateY(-50%);
 }
 .time_slider_circle{
@@ -455,21 +475,7 @@ img[src$=".svg"]:not(.white_svg){
     visibility: visible;
 }
 
-.audio_controls.flex{
-    align-items: center;
-    flex-wrap: wrap;
-}
-.volume_bar{
-    display: inline-block;
-    width: 5vw;
-    height:5px;
-    border-radius: 2.5px;
-    background: #5a5a5a;
-    position:relative;
-    margin: 0 .5rem;
-    vertical-align: middle;
-    transform: translateY(-50%);
-}
+
 /* #endregion ***********FOOTER*********** */
 
 /* #region ***********MEDIAQUERY*********** */
@@ -491,5 +497,8 @@ img[src$=".svg"]:not(.white_svg){
     .song_wrapper {
         width: calc(100% / 2);
     }
+}
+@media screen and (max-width:425px) {
+    
 }
 /* #endregion ***********MEDIAQUERY*********** */
