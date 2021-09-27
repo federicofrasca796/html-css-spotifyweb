@@ -250,6 +250,19 @@ img[src$=".svg"]:not(.white_svg){
 .upgrade>.btn_h50:hover{
     transform: scale(110%);
 }
+.upgrade>.small_btn{
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    padding: 0rem 1rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+    display: none;
+}
+.small_btn>i{
+    margin-right:10px;
+    font-size: 1rem;
+}
 
 .menu ul{
     text-align: center;
@@ -500,8 +513,18 @@ img[src$=".svg"]:not(.white_svg){
     .song_wrapper {
         width: calc(100% / 2);
     }
+    .btn_h50{
+        display: none;
+    }
+    .upgrade{
+        padding: 1rem;
+    }
+    .upgrade>.small_btn{
+        display: block;
+    }
+
 }
-@media screen and (max-width:425px) {
+@media screen and (max-width:450px) {
     .logo,
     .playlist,
     .sidebar_footer,
