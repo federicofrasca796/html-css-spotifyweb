@@ -369,7 +369,7 @@ img[src$=".svg"]:not(.white_svg){
 }
 
 .now_playing.flex{
-    height: 60%;
+    height: 50%;
     align-items: center;
     justify-content: space-between;
     flex-shrink: 0;
@@ -378,7 +378,6 @@ img[src$=".svg"]:not(.white_svg){
     height: 100%;
     align-items: center;
     flex-shrink: 0;
-
 }
 .now_wrapper img{
     height: 100%;
@@ -413,21 +412,22 @@ img[src$=".svg"]:not(.white_svg){
 }
 .player_buttons{
     align-items: center;
+    width: 50%;
+    justify-content: space-around;
 }
 .player_buttons > a{
     margin: 0 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     vertical-align: middle;
 }
 .player_buttons > a:nth-child(3){
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .controls_middle{
     flex-direction: column;
     align-items: center;
+    width: 40%;
     margin: 0 2rem;
-    flex-shrink: 1;
-    width: 50%;
 }
 .player_buttons,
 .play_time,
@@ -438,16 +438,18 @@ img[src$=".svg"]:not(.white_svg){
 .play_time{
     align-items: center;
     margin: 10px 0;
-    font-size: .9rem;
     width:100%;
 }
 .time_bar{
     width: 100%;
-    height:5px;
+    height:4px;
     border-radius: 2.5px;
     background: #5a5a5a;
     position:relative;
-    margin: auto 2rem;
+}
+.play_time > span:not(.time_bar){
+    margin: 0 10px;
+    font-size: .8rem;
 }
 .white_bar{
     background: #c1c1c1;
@@ -531,6 +533,34 @@ img[src$=".svg"]:not(.white_svg){
     .now_playing.flex{
         flex-shrink: 1;
     }
+    .now_wrapper{
+        flex-shrink: 1;
+    } 
+    .player_buttons{
+        align-items: center;
+        width: 30%;
+        justify-content: space-around;
+    }   
+}
+@media screen and (max-width:600px) {
+    .song_wrapper {
+        width: 100%;
+    }
+    .player_buttons{
+        width: 100%;
+    }
+    .player_buttons > a {
+        margin: 0;
+    }
+    .player_buttons > a:nth-child(3){
+        margin: 0 1rem;
+    }
+    .play_time > span:not(.time_bar){
+        display: none;
+    }
+    .volume_bar{
+        display: none;
+    }
 }
 @media screen and (max-width:450px) {
     .logo,
@@ -568,6 +598,10 @@ img[src$=".svg"]:not(.white_svg){
     .sidebar .current_selection {
         border-left: none;
     }
-
+    
+    .player_buttons i.fa-random,
+    .player_buttons i.fa-redo{
+        display: none;
+    }
 }
 /* #endregion ***********MEDIAQUERY*********** */
