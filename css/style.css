@@ -295,7 +295,7 @@ img[src$=".svg"]:not(.white_svg){
     flex-wrap: wrap;
 }
 .song_wrapper{
-    max-width: 250px;
+    width: calc(100% / 6);
     padding: 0 .5rem 2rem;
 }
 .song_wrapper img{
