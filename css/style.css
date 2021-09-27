@@ -128,6 +128,9 @@ a{
     width: 80%;
     margin-top: 1rem;
 }
+.logo_s{
+    display: none;
+}
 img[src$=".svg"]:not(.white_svg){
     filter: invert(54%) sepia(0%) saturate(1%) hue-rotate(177deg) brightness(92%) contrast(86%);
 }
@@ -499,6 +502,29 @@ img[src$=".svg"]:not(.white_svg){
     }
 }
 @media screen and (max-width:425px) {
-    
+    .logo,
+    .playlist,
+    .sidebar_footer,
+    .home_controls span{
+        display: none;
+    }
+    .home_controls li{
+        padding: 8px 0;
+    }
+    .sidebar{
+        width: 60px;
+        padding:10px;
+    }
+    #main_content{
+        width: calc(100% - 50px);
+    }
+    .logo_s, .home_controls img{
+        display: block;
+        width: 100%;
+    }
+
+    .sidebar .current_selection {
+        border-left: none;
+    }
 }
 /* #endregion ***********MEDIAQUERY*********** */
